@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="greet.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Apis" Version="1.55.0" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.41.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.42.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+	<ItemGroup>
+<Protobuf Include="Protos\greet.proto" GrpcServices="Client" />
+</ItemGroup>		<Protobuf Include="Protos\greet.proto" GrpcServices="Client" />
+	
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pop_Simona_Lab10M\Pop_Simona_Lab10M.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="greet.proto" GrpcServices="Server" />
+  </ItemGroup>
+
+</Project>
